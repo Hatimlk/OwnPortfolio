@@ -227,65 +227,81 @@ function App() {
             <div className="section-line"></div>
           </div>
           
-          <div className="skills-grid">
-            <div className="skill-category" {...interactiveProps}>
-              <h3><i className="ph ph-browser"></i> {t.skills.frontend}</h3>
-              <div className="skill-tags">
-                <span className="skill-tag">React.js</span>
-                <span className="skill-tag">Next.js</span>
-                <span className="skill-tag">TypeScript</span>
-                <span className="skill-tag">HTML5/CSS3</span>
-                <span className="skill-tag">JavaScript</span>
-                <span className="skill-tag">JavaFX</span>
-              </div>
+          <div className="skills-container">
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-brands-logo"></i></div>
+              <div className="skill-name">React</div>
+              <div className="skill-count">5+ years</div>
             </div>
-            
-            <div className="skill-category" {...interactiveProps}>
-              <h3><i className="ph ph-terminal-window"></i> {t.skills.backend}</h3>
-              <div className="skill-tags">
-                <span className="skill-tag">Node.js</span>
-                <span className="skill-tag">Express.js</span>
-                <span className="skill-tag">Java</span>
-                <span className="skill-tag">Spring Boot</span>
-                <span className="skill-tag">C# / .NET</span>
-                <span className="skill-tag">PHP</span>
-              </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-code"></i></div>
+              <div className="skill-name">TypeScript</div>
+              <div className="skill-count">4+ years</div>
             </div>
-            
-            <div className="skill-category" {...interactiveProps}>
-              <h3><i className="ph ph-database"></i> {t.skills.database}</h3>
-              <div className="skill-tags">
-                <span className="skill-tag">MySQL</span>
-                <span className="skill-tag">MongoDB</span>
-                <span className="skill-tag">Firebase</span>
-                <span className="skill-tag">Oracle</span>
-                <span className="skill-tag">SQL Server</span>
-                <span className="skill-tag">SQLite</span>
-              </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-node-logo"></i></div>
+              <div className="skill-name">Node.js</div>
+              <div className="skill-count">5+ years</div>
             </div>
-            
-            <div className="skill-category" {...interactiveProps}>
-              <h3><i className="ph ph-cloud"></i> {t.skills.cloud}</h3>
-              <div className="skill-tags">
-                <span className="skill-tag">AWS</span>
-                <span className="skill-tag">Docker</span>
-                <span className="skill-tag">Git / GitHub</span>
-                <span className="skill-tag">GitLab</span>
-                <span className="skill-tag">Figma</span>
-                <span className="skill-tag">Shopify/WordPress</span>
-              </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-database"></i></div>
+              <div className="skill-name">MongoDB</div>
+              <div className="skill-count">4+ years</div>
             </div>
-
-            <div className="skill-category" {...interactiveProps}>
-              <h3><i className="ph ph-globe"></i> {t.skills.networking}</h3>
-              <div className="skill-tags">
-                <span className="skill-tag">TCP/IP</span>
-                <span className="skill-tag">DNS</span>
-                <span className="skill-tag">HTTP/HTTPS</span>
-                <span className="skill-tag">VPN</span>
-                <span className="skill-tag">Firewall</span>
-                <span className="skill-tag">REST APIs</span>
-              </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-cube"></i></div>
+              <div className="skill-name">Docker</div>
+              <div className="skill-count">3+ years</div>
+            </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-cloud"></i></div>
+              <div className="skill-name">AWS</div>
+              <div className="skill-count">2+ years</div>
+            </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-terminal"></i></div>
+              <div className="skill-name">Java</div>
+              <div className="skill-count">4+ years</div>
+            </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-spring-logo"></i></div>
+              <div className="skill-name">Spring Boot</div>
+              <div className="skill-count">2+ years</div>
+            </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-microsoft-logo"></i></div>
+              <div className="skill-name">.NET</div>
+              <div className="skill-count">3+ years</div>
+            </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-figma-logo"></i></div>
+              <div className="skill-name">Figma</div>
+              <div className="skill-count">3+ years</div>
+            </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-git-branch"></i></div>
+              <div className="skill-name">Git</div>
+              <div className="skill-count">5+ years</div>
+            </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-shopify-logo"></i></div>
+              <div className="skill-name">Shopify</div>
+              <div className="skill-count">2+ years</div>
+            </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-wordpress-logo"></i></div>
+              <div className="skill-name">WordPress</div>
+              <div className="skill-count">3+ years</div>
+            </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-aws-logo"></i></div>
+              <div className="skill-name">MySQL</div>
+              <div className="skill-count">5+ years</div>
+            </div>
+            <div className="skill-item" {...interactiveProps}>
+              <div className="skill-icon"><i className="ph ph-fire"></i></div>
+              <div className="skill-name">Firebase</div>
+              <div className="skill-count">3+ years</div>
             </div>
           </div>
         </div>
