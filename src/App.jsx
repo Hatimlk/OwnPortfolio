@@ -260,6 +260,18 @@ function App() {
                 <span className="skill-tag">Shopify/WordPress</span>
               </div>
             </div>
+
+            <div className="skill-category" {...interactiveProps}>
+              <h3><i className="ph ph-globe"></i> Networking</h3>
+              <div className="skill-tags">
+                <span className="skill-tag">TCP/IP</span>
+                <span className="skill-tag">DNS</span>
+                <span className="skill-tag">HTTP/HTTPS</span>
+                <span className="skill-tag">VPN</span>
+                <span className="skill-tag">Firewall</span>
+                <span className="skill-tag">REST APIs</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
