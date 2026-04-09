@@ -274,6 +274,28 @@ function App() {
           <div className="projects-grid">
             <div className="project-card" {...interactiveProps}>
               <div className="project-image">
+                <img src={tilmideImg} alt="Orieneduca Platform" />
+              </div>
+              <div className="project-header">
+                <div className="project-icon"><i className="ph ph-folder-notch-open"></i></div>
+                <div className="project-links">
+                </div>
+              </div>
+              <h3 className="project-title">Orieneduca Platform</h3>
+              <p className="project-desc">
+                An interactive educational orientation platform integrating a customized recommendation engine based on user profiles. Features a modern, highly optimized, and responsive interface.
+              </p>
+              <div className="project-tech">
+                <span>TypeScript</span>
+                <span>React</span>
+                <span>Next.js</span>
+                <span>Node.js</span>
+                <span>REST API</span>
+              </div>
+            </div>
+
+            <div className="project-card" {...interactiveProps}>
+              <div className="project-image">
                 <img src={tilmideImg} alt="Tilmid Student Portal" />
               </div>
               <div className="project-header">
