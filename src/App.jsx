@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import profileImage from './assets/profile.png';
+import classConnectImg from './assets/ClassConnect.png';
+import nestyImg from './assets/Nesty Webiste.png';
+import tilmideImg from './assets/Tilmide-Orientation Plateforme.png';
 
 function App() {
   const [navScrolled, setNavScrolled] = useState(false);
@@ -270,25 +273,9 @@ function App() {
           
           <div className="projects-grid">
             <div className="project-card" {...interactiveProps}>
-              <div className="project-header">
-                <div className="project-icon"><i className="ph ph-folder-notch-open"></i></div>
-                <div className="project-links">
-                </div>
+              <div className="project-image">
+                <img src={tilmideImg} alt="Tilmid Student Portal" />
               </div>
-              <h3 className="project-title">Orieneduca Platform</h3>
-              <p className="project-desc">
-                An interactive educational orientation platform integrating a customized recommendation engine based on user profiles. Features a modern, highly optimized, and responsive interface.
-              </p>
-              <div className="project-tech">
-                <span>TypeScript</span>
-                <span>React</span>
-                <span>Next.js</span>
-                <span>Node.js</span>
-                <span>REST API</span>
-              </div>
-            </div>
-
-            <div className="project-card" {...interactiveProps}>
               <div className="project-header">
                 <div className="project-icon"><i className="ph ph-folder-notch-open"></i></div>
                 <div className="project-links">
@@ -308,6 +295,9 @@ function App() {
             </div>
 
             <div className="project-card" {...interactiveProps}>
+              <div className="project-image">
+                <img src={nestyImg} alt="Nesty Real Estate" />
+              </div>
               <div className="project-header">
                 <div className="project-icon"><i className="ph ph-folder-notch-open"></i></div>
                 <div className="project-links">
@@ -327,6 +317,9 @@ function App() {
             </div>
             
             <div className="project-card" {...interactiveProps}>
+              <div className="project-image">
+                <img src={classConnectImg} alt="ClassConnect" />
+              </div>
               <div className="project-header">
                 <div className="project-icon"><i className="ph ph-folder-notch-open"></i></div>
                 <div className="project-links">
