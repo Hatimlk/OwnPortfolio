@@ -274,23 +274,25 @@ function App() {
           <div className="projects-grid">
             <div className="project-card" {...interactiveProps}>
               <div className="project-image">
-                <img src={tilmideImg} alt="Orieneduca Platform" />
+                <img src={classConnectImg} alt="ClassConnect" />
               </div>
               <div className="project-header">
                 <div className="project-icon"><i className="ph ph-folder-notch-open"></i></div>
                 <div className="project-links">
+                  <a href="https://github.com/Hatimlk/ClassConnect" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><i className="ph ph-github-logo"></i></a>
+                  <a href="https://class-connect-sigma.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Live Demo"><i className="ph ph-arrow-square-out"></i></a>
                 </div>
               </div>
-              <h3 className="project-title">Orieneduca Platform</h3>
+              <h3 className="project-title">ClassConnect</h3>
               <p className="project-desc">
-                An interactive educational orientation platform integrating a customized recommendation engine based on user profiles. Features a modern, highly optimized, and responsive interface.
+                A comprehensive classroom management platform enabling teachers to create courses, manage students, share resources, and track attendance with real-time updates.
               </p>
               <div className="project-tech">
-                <span>TypeScript</span>
                 <span>React</span>
-                <span>Next.js</span>
                 <span>Node.js</span>
+                <span>MongoDB</span>
                 <span>REST API</span>
+                <span>JWT</span>
               </div>
             </div>
 
@@ -340,25 +342,23 @@ function App() {
             
             <div className="project-card" {...interactiveProps}>
               <div className="project-image">
-                <img src={classConnectImg} alt="ClassConnect" />
+                <img src={tilmideImg} alt="Orieneduca Platform" />
               </div>
               <div className="project-header">
                 <div className="project-icon"><i className="ph ph-folder-notch-open"></i></div>
                 <div className="project-links">
-                  <a href="https://github.com/Hatimlk/ClassConnect" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><i className="ph ph-github-logo"></i></a>
-                  <a href="https://class-connect-sigma.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Live Demo"><i className="ph ph-arrow-square-out"></i></a>
                 </div>
               </div>
-              <h3 className="project-title">ClassConnect</h3>
+              <h3 className="project-title">Orieneduca Platform</h3>
               <p className="project-desc">
-                A comprehensive classroom management platform enabling teachers to create courses, manage students, share resources, and track attendance with real-time updates.
+                An interactive educational orientation platform integrating a customized recommendation engine based on user profiles. Features a modern, highly optimized, and responsive interface.
               </p>
               <div className="project-tech">
+                <span>TypeScript</span>
                 <span>React</span>
+                <span>Next.js</span>
                 <span>Node.js</span>
-                <span>MongoDB</span>
                 <span>REST API</span>
-                <span>JWT</span>
               </div>
             </div>
 
