@@ -185,7 +185,7 @@ function App() {
             
             <div className="stats-grid">
               <div className="stat-card" {...interactiveProps}>
-                <div className="stat-num">2+</div>
+                <div className="stat-num">4+</div>
                 <div className="stat-label">Years of Experience</div>
               </div>
               <div className="stat-card" {...interactiveProps}>
@@ -193,8 +193,8 @@ function App() {
                 <div className="stat-label">Tech Skills Mastered</div>
               </div>
               <div className="stat-card" {...interactiveProps}>
-                <div className="stat-num">4+</div>
-                <div className="stat-label">Major Projects Shipped</div>
+                <div className="stat-num">20+</div>
+                <div className="stat-label">Projects Delivered</div>
               </div>
               <div className="stat-card" {...interactiveProps}>
                 <div className="stat-num">100%</div>
