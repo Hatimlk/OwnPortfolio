@@ -82,9 +82,24 @@ function App() {
       observer.observe(section);
     });
 
+    // Timeline items observer
+    const timelineObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { rootMargin: '0px', threshold: 0.2 });
+
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      timelineObserver.observe(item);
+    });
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(typingTimeout);
+      observer.disconnect();
+      timelineObserver.disconnect();
     };
   }, [lang]);
 
