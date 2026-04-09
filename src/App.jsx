@@ -280,7 +280,7 @@ function App() {
                 <div className="project-icon"><i className="ph ph-folder-notch-open"></i></div>
                 <div className="project-links">
                   <a href="https://github.com/Hatimlk/ClassConnect" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><i className="ph ph-github-logo"></i></a>
-                  <a href="https://class-connect-sigma.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Live Demo"><i className="ph ph-arrow-square-out"></i></a>
+                  <a href="https://class-connect-six.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Live Demo"><i className="ph ph-arrow-square-out"></i></a>
                 </div>
               </div>
               <h3 className="project-title">ClassConnect</h3>
