@@ -518,6 +518,10 @@ nav.scrolled {
     padding-bottom: 1.5rem;
 }
 
+.project-card:not(:has(.project-image)) .project-header {
+    padding-top: 2rem;
+}
+
 .project-card .project-title {
     padding-top: 0.5rem;
     padding-bottom: 1rem;

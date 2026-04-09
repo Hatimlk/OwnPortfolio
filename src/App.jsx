@@ -341,9 +341,6 @@ function App() {
             </div>
             
             <div className="project-card" {...interactiveProps}>
-              <div className="project-image">
-                <img src={tilmideImg} alt="Orieneduca Platform" />
-              </div>
               <div className="project-header">
                 <div className="project-icon"><i className="ph ph-folder-notch-open"></i></div>
                 <div className="project-links">
