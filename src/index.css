@@ -439,6 +439,22 @@ nav.scrolled {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: skillFadeIn 0.6s ease forwards;
+}
+
+.skill-category:nth-child(1) { animation-delay: 0.1s; }
+.skill-category:nth-child(2) { animation-delay: 0.2s; }
+.skill-category:nth-child(3) { animation-delay: 0.3s; }
+.skill-category:nth-child(4) { animation-delay: 0.4s; }
+.skill-category:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes skillFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .skill-category::before {
@@ -455,7 +471,7 @@ nav.scrolled {
 
 .skill-category:hover {
     border-color: rgba(0, 255, 136, 0.4);
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
@@ -476,6 +492,12 @@ nav.scrolled {
 .skill-category i {
     color: var(--primary);
     font-size: 1.5rem;
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 .skill-tags {
@@ -495,6 +517,8 @@ nav.scrolled {
     display: flex;
     align-items: center;
     gap: 6px;
+    position: relative;
+    overflow: hidden;
 }
 
 .skill-tag::before {
@@ -502,7 +526,19 @@ nav.scrolled {
     color: var(--primary);
     font-size: 0.7rem;
     opacity: 0;
+    transform: translateX(-10px);
     transition: var(--transition);
+}
+
+.skill-tag::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
 }
 
 .skill-tag:hover {
@@ -514,6 +550,11 @@ nav.scrolled {
 
 .skill-tag:hover::before {
     opacity: 1;
+    transform: translateX(0);
+}
+
+.skill-tag:hover::after {
+    width: 100%;
 }
 
 /* Projects Section */
