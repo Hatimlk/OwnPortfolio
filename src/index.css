@@ -263,8 +263,35 @@ nav.scrolled {
     position: relative;
 }
 
+#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
 .hero-content {
-    max-width: 800px;
+    max-width: 600px;
+    flex: 1;
+}
+
+.hero-image {
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 30px var(--primary-glow);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
 .greeting {
@@ -746,6 +773,16 @@ textarea.form-control {
 @media (max-width: 900px) {
     .about-grid {
         grid-template-columns: 1fr;
+    }
+    
+    #hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-image img {
+        width: 250px;
+        height: 250px;
     }
 }
 

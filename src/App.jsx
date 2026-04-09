@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import profileImage from './assets/profile.png';
 
 function App() {
   const [navScrolled, setNavScrolled] = useState(false);
@@ -152,6 +153,9 @@ function App() {
               <a href="#projects" className="btn btn-primary" {...interactiveProps}>Check out my work!</a>
               <a href="#contact" className="btn btn-outline" {...interactiveProps}>Let's Talk</a>
             </div>
+          </div>
+          <div className="hero-image">
+            <img src={profileImage} alt="Hatim Lakrouni" />
           </div>
         </div>
       </header>
