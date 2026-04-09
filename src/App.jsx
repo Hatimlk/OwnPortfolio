@@ -326,6 +326,27 @@ function App() {
               <div className="project-header">
                 <div className="project-icon"><i className="ph ph-folder-notch-open"></i></div>
                 <div className="project-links">
+                  <a href="https://github.com/Hatimlk/ClassConnect" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><i className="ph ph-github-logo"></i></a>
+                  <a href="https://class-connect-sigma.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Live Demo"><i className="ph ph-arrow-square-out"></i></a>
+                </div>
+              </div>
+              <h3 className="project-title">ClassConnect</h3>
+              <p className="project-desc">
+                A comprehensive classroom management platform enabling teachers to create courses, manage students, share resources, and track attendance with real-time updates.
+              </p>
+              <div className="project-tech">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>REST API</span>
+                <span>JWT</span>
+              </div>
+            </div>
+
+            <div className="project-card" {...interactiveProps}>
+              <div className="project-header">
+                <div className="project-icon"><i className="ph ph-folder-notch-open"></i></div>
+                <div className="project-links">
                 </div>
               </div>
               <h3 className="project-title">Autocar Tickets Manager</h3>
