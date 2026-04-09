@@ -605,20 +605,6 @@ nav.scrolled {
 }
 
 /* Projects Section */
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-}
-
-.skill-count {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
-/* Projects Section */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
