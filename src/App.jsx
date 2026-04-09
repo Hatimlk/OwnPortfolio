@@ -4,8 +4,11 @@ import profileImage from './assets/profile.png';
 import classConnectImg from './assets/ClassConnect.png';
 import nestyImg from './assets/Nesty Webiste.png';
 import tilmideImg from './assets/Tilmide-Orientation Plateforme.png';
+import { translations } from './translations';
 
 function App() {
+  const [lang, setLang] = useState('en');
+  const t = translations[lang];
   const [navScrolled, setNavScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('');
@@ -33,7 +36,7 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     
     // Typing effect logic
-    const words = ["I build APIs.", "I craft UIs.", "I design data flows.", "I engineer products."];
+    const words = t.hero.typing;
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -83,7 +86,7 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(typingTimeout);
     };
-  }, []);
+  }, [lang]);
 
   useEffect(() => {
     // Cursor events (only for devices with fine pointer like mouse)
@@ -120,41 +123,44 @@ function App() {
         <div className="container nav-container">
           <a href="#hero" className="logo" {...interactiveProps}>Hatim<span>.</span></a>
           <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
-            <li><a href="#about" className={activeTab === 'about' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>About</a></li>
-            <li><a href="#skills" className={activeTab === 'skills' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>Skills</a></li>
-            <li><a href="#projects" className={activeTab === 'projects' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>Work</a></li>
-            <li><a href="#experience" className={activeTab === 'experience' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>Experience</a></li>
-            <li><a href="#certifications" className={activeTab === 'certifications' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>Certifications</a></li>
-            <li><a href="#contact" className={activeTab === 'contact' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>Contact</a></li>
+            <li><a href="#about" className={activeTab === 'about' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>{t.nav.about}</a></li>
+            <li><a href="#skills" className={activeTab === 'skills' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>{t.nav.skills}</a></li>
+            <li><a href="#projects" className={activeTab === 'projects' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>{t.nav.work}</a></li>
+            <li><a href="#experience" className={activeTab === 'experience' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>{t.nav.experience}</a></li>
+            <li><a href="#certifications" className={activeTab === 'certifications' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>{t.nav.certifications}</a></li>
+            <li><a href="#contact" className={activeTab === 'contact' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)} {...interactiveProps}>{t.nav.contact}</a></li>
           </ul>
-          <button 
-            className="hamburger" 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            {...interactiveProps}
-          >
-            {mobileMenuOpen ? <i className="ph ph-x"></i> : <i className="ph ph-list"></i>}
-          </button>
+          <div className="nav-right">
+            <button className="lang-toggle" onClick={() => setLang(lang === 'en' ? 'fr' : 'en')} {...interactiveProps}>
+              {lang === 'en' ? 'FR' : 'EN'}
+            </button>
+            <button 
+              className="hamburger" 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              {...interactiveProps}
+            >
+              {mobileMenuOpen ? <i className="ph ph-x"></i> : <i className="ph ph-list"></i>}
+            </button>
+          </div>
         </div>
       </nav>
 
       <header id="hero" className="section">
         <div className="container">
           <div className="hero-content">
-            <span className="greeting">Hi, my name is</span>
+            <span className="greeting">{t.hero.greeting}</span>
             <h1 className="name">LAKROUNI HATIM.</h1>
-            <h2 className="title">Full Stack Developer.</h2>
+            <h2 className="title">{t.hero.title}</h2>
             
             <div className="typing-container">
               <span className="typing-text">{typedText}</span>
             </div>
             
-            <p className="hero-desc">
-              I am a Software Engineering graduate specializing in designing performant, secure, and scalable cloud applications. I build robust backends, craft dynamic UIs, and engineer complete digital products.
-            </p>
+            <p className="hero-desc">{t.hero.desc}</p>
             
             <div className="hero-actions">
-              <a href="#projects" className="btn btn-primary" {...interactiveProps}>Check out my work!</a>
-              <a href="#contact" className="btn btn-outline" {...interactiveProps}>Let's Talk</a>
+              <a href="#projects" className="btn btn-primary" {...interactiveProps}>{t.hero.cta1}</a>
+              <a href="#contact" className="btn btn-outline" {...interactiveProps}>{t.hero.cta2}</a>
             </div>
           </div>
           <div className="hero-image">
@@ -166,39 +172,33 @@ function App() {
       <section id="about" className="section">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title"><span className="highlight">01.</span> About Me</h2>
+            <h2 className="section-title"><span className="highlight">01.</span> {t.about.title}</h2>
             <div className="section-line"></div>
           </div>
           
           <div className="about-grid">
             <div className="about-text">
-              <p>
-                Hello! I'm Hatim, a passionate Full Stack Developer based in <strong>Casablanca, Morocco</strong>. I hold a professional license in Software Engineering and possess deep expertise across modern web frameworks, DevOps methodologies, and cloud architectures.
-              </p>
-              <p>
-                My journey in tech is driven by complex technical challenges and a constant desire for improvement. Whether it's architecting a scalable REST API, tailoring a custom Shopify storefront, or setting up robust Dockerized deployments on AWS, I thrive on turning ideas into functional, high-value realities.
-              </p>
-              <p>
-                Here are a few metrics that define my journey so far:
-              </p>
+              <p>{t.about.p1}</p>
+              <p>{t.about.p2}</p>
+              <p>{t.about.p3}</p>
             </div>
             
             <div className="stats-grid">
               <div className="stat-card" {...interactiveProps}>
                 <div className="stat-num">4+</div>
-                <div className="stat-label">Years of Experience</div>
+                <div className="stat-label">{t.about.stats.experience}</div>
               </div>
               <div className="stat-card" {...interactiveProps}>
                 <div className="stat-num">15+</div>
-                <div className="stat-label">Tech Skills Mastered</div>
+                <div className="stat-label">{t.about.stats.skills}</div>
               </div>
               <div className="stat-card" {...interactiveProps}>
                 <div className="stat-num">20+</div>
-                <div className="stat-label">Projects Delivered</div>
+                <div className="stat-label">{t.about.stats.projects}</div>
               </div>
               <div className="stat-card" {...interactiveProps}>
                 <div className="stat-num">100%</div>
-                <div className="stat-label">Commitment to Quality</div>
+                <div className="stat-label">{t.about.stats.quality}</div>
               </div>
             </div>
           </div>
@@ -208,13 +208,13 @@ function App() {
       <section id="skills" className="section">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title"><span className="highlight">02.</span> Technical Arsenal</h2>
+            <h2 className="section-title"><span className="highlight">02.</span> {t.skills.title}</h2>
             <div className="section-line"></div>
           </div>
           
           <div className="skills-grid">
             <div className="skill-category" {...interactiveProps}>
-              <h3><i className="ph ph-browser"></i> Frontend</h3>
+              <h3><i className="ph ph-browser"></i> {t.skills.frontend}</h3>
               <div className="skill-tags">
                 <span className="skill-tag">React.js</span>
                 <span className="skill-tag">Next.js</span>
@@ -226,7 +226,7 @@ function App() {
             </div>
             
             <div className="skill-category" {...interactiveProps}>
-              <h3><i className="ph ph-terminal-window"></i> Backend</h3>
+              <h3><i className="ph ph-terminal-window"></i> {t.skills.backend}</h3>
               <div className="skill-tags">
                 <span className="skill-tag">Node.js</span>
                 <span className="skill-tag">Express.js</span>
@@ -238,7 +238,7 @@ function App() {
             </div>
             
             <div className="skill-category" {...interactiveProps}>
-              <h3><i className="ph ph-database"></i> Database</h3>
+              <h3><i className="ph ph-database"></i> {t.skills.database}</h3>
               <div className="skill-tags">
                 <span className="skill-tag">MySQL</span>
                 <span className="skill-tag">MongoDB</span>
@@ -250,7 +250,7 @@ function App() {
             </div>
             
             <div className="skill-category" {...interactiveProps}>
-              <h3><i className="ph ph-cloud"></i> Cloud & DevOps</h3>
+              <h3><i className="ph ph-cloud"></i> {t.skills.cloud}</h3>
               <div className="skill-tags">
                 <span className="skill-tag">AWS</span>
                 <span className="skill-tag">Docker</span>
@@ -262,7 +262,7 @@ function App() {
             </div>
 
             <div className="skill-category" {...interactiveProps}>
-              <h3><i className="ph ph-globe"></i> Networking</h3>
+              <h3><i className="ph ph-globe"></i> {t.skills.networking}</h3>
               <div className="skill-tags">
                 <span className="skill-tag">TCP/IP</span>
                 <span className="skill-tag">DNS</span>
@@ -279,7 +279,7 @@ function App() {
       <section id="projects" className="section">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title"><span className="highlight">03.</span> Featured Projects</h2>
+            <h2 className="section-title"><span className="highlight">03.</span> {t.projects.title}</h2>
             <div className="section-line"></div>
           </div>
           
@@ -395,7 +395,7 @@ function App() {
       <section id="experience" className="section">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title"><span className="highlight">04.</span> Professional Experience</h2>
+            <h2 className="section-title"><span className="highlight">04.</span> {t.experience.title}</h2>
             <div className="section-line"></div>
           </div>
           
@@ -463,7 +463,7 @@ function App() {
       <section id="certifications" className="section">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title"><span className="highlight">05.</span> Certifications</h2>
+            <h2 className="section-title"><span className="highlight">05.</span> {t.certifications.title}</h2>
             <div className="section-line"></div>
           </div>
           
@@ -491,26 +491,24 @@ function App() {
       <section id="contact" className="section">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title"><span className="highlight">06.</span> Get In Touch</h2>
+            <h2 className="section-title"><span className="highlight">06.</span> {t.contact.title}</h2>
             <div className="section-line"></div>
           </div>
           
           <div className="contact-content">
-            <p>
-              I'm currently open to new opportunities. Whether you have a question, a project idea, or just want to say hi, my inbox is always open. Let's build something amazing together!
-            </p>
+            <p>{t.contact.desc}</p>
             
             <form className="contact-form" onSubmit={(e) => { e.preventDefault(); alert('Message sent functionality requires backend! But looking good!'); }}>
               <div className="form-group">
-                <input type="text" className="form-control" placeholder="Name" required />
+                <input type="text" className="form-control" placeholder={t.contact.name} required />
               </div>
               <div className="form-group">
-                <input type="email" className="form-control" placeholder="Email" required />
+                <input type="email" className="form-control" placeholder={t.contact.email} required />
               </div>
               <div className="form-group">
-                <textarea className="form-control" placeholder="Message" required></textarea>
+                <textarea className="form-control" placeholder={t.contact.message} required></textarea>
               </div>
-              <button type="submit" className="btn btn-primary" {...interactiveProps}>Send Message</button>
+              <button type="submit" className="btn btn-primary" {...interactiveProps}>{t.contact.send}</button>
             </form>
             
             <div className="social-links">
@@ -524,8 +522,8 @@ function App() {
 
       <footer className="footer">
         <div className="container">
-          <p>Designed & Built by <span className="footer-logo">Hatim Lakrouni</span></p>
-          <p style={{ marginTop: '5px', opacity: 0.6, fontSize: '0.8em' }}>&copy; 2026. All rights reserved.</p>
+          <p>{t.footer.designed} <span className="footer-logo">{t.footer.name}</span></p>
+          <p style={{ marginTop: '5px', opacity: 0.6, fontSize: '0.8em' }}>&copy; 2026. {t.footer.rights}</p>
         </div>
       </footer>
     </>
